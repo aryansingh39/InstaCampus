@@ -1,0 +1,101 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String   @unique
+  password   String
+  role       Role     @default(STUDENT)
+  hostel     String?
+  department String?
+  batch      String?
+  avatar     String?
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  posts      Post[]
+  comments   Comment[]
+  reactions  Reaction[]
+}
+
+model Post {
+  id          Int        @id @default(autoincrement())
+  content     String
+  imageUrl    String?
+  tags        String[]
+  summary     String?
+  sentiment   Sentiment  @default(NEUTRAL)
+  isAnonymous Boolean    @default(false)
+  isActive    Boolean    @default(true)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  author      User       @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId    Int
+  comments    Comment[]
+  reactions   Reaction[]
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  content   String
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId    Int
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId  Int
+}
+
+model Reaction {
+  id        Int          @id @default(autoincrement())
+  type      ReactionType
+  createdAt DateTime     @default(now())
+
+  user      User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    Int
+  post      Post         @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId    Int
+
+  @@unique([userId, postId, type])
+}
+
+model Trend {
+  tag       String   @id
+  count     Int      @default(0)
+  updatedAt DateTime @updatedAt
+}
+
+model Summary {
+  id        Int      @id @default(autoincrement())
+  date      DateTime @unique
+  content   String
+  createdAt DateTime @default(now())
+}
+
+enum Role {
+  ADMIN
+  STUDENT
+}
+
+enum Sentiment {
+  POSITIVE
+  NEGATIVE
+  NEUTRAL
+}
+
+enum ReactionType {
+  LIKE
+  UPVOTE
+  DOWNVOTE
+}
