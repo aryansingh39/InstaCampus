@@ -1,6 +1,7 @@
-<img width="1470" alt="Screenshot 2025-07-06 at 18 39 56" src="https://github.com/user-attachments/assets/c4611caa-27ab-4753-93ba-50da434e2143" /># 🎓 InstaCampus
+# 🎓 InstaCampus
 
 A modern full-stack campus social media platform for students and staff to connect, share news, and discuss everything campus-related.
+WhatsApp Image 2025-07-06 at 18.49.09.jpeg
 
 ---
 
@@ -18,8 +19,7 @@ A modern full-stack campus social media platform for students and staff to conne
 
 <!-- Add actual image URLs or relative paths to your repo/images -->
 <p>
-  <img src="<img width="1470" alt="Screenshot 2025-07-06 at 18 39 56" src="https://github.com/user-attachments/assets/f92c147d-fa61-4612-b7d9-eb05386045ec" />
-" width="600" alt="Home Page Screenshot"/>
+  <img src="WhatsApp Image 2025-07-06 at 18.49.09.jpeg" width="600" alt="Home Page Screenshot"/>
 </p>
 
 
