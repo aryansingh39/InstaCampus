@@ -17,4 +17,15 @@ export const postsAPI = {
     method: 'POST', 
     body: JSON.stringify(body) 
   }),
+  getComments: (postId: number) => request(`/posts/${postId}/comments`),
+  createComment: (postId: number, body: any) => request(`/posts/${postId}/comments`, {
+    method: 'POST',
+    body: JSON.stringify(body)
+  }),
+  // Add these new reaction functions:
+  toggleReaction: (postId: number, type: string) => request(`/posts/${postId}/reactions`, {
+    method: 'POST',
+    body: JSON.stringify({ type })
+  }),
+  getReactions: (postId: number) => request(`/posts/${postId}/reactions`),
 };

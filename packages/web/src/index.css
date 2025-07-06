@@ -4,6 +4,24 @@
 @layer components {
   .input { @apply border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500; }
 }
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.8s;
+  }
+  .animate-pop {
+    animation: pop 0.4s;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(24px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+@keyframes pop {
+  0%   { transform: scale(0.8);}
+  80%  { transform: scale(1.04);}
+  100% { transform: scale(1);}
+}
 
 
 body {

@@ -19,12 +19,38 @@ export const createPost = async (req: Request, res: Response) => {
 };
 
 export const listPosts = async (_req: Request, res: Response) => {
-  const posts = await prisma.post.findMany({
-    include: {
-      author: { select: { id: true, name: true } }
-    },
-    orderBy: { createdAt: 'desc' },
-    take: 20
-  });
-  res.json(posts);
+  try {
+    const posts = await prisma.post.findMany({
+      where: { isActive: true },
+      include: {
+        author: { select: { id: true, name: true } },
+        _count: { select: { comments: true } },
+        reactions: {
+          select: { type: true }
+        }
+      },
+      orderBy: { createdAt: 'desc' },
+      take: 20
+    });
+
+    // Process reaction counts for each post
+    const postsWithCounts = posts.map(post => {
+      const reactionCounts = post.reactions.reduce((acc: any, reaction) => {
+        acc[reaction.type] = (acc[reaction.type] || 0) + 1;
+        return acc;
+      }, {});
+
+      return {
+        ...post,
+        reactionCounts,
+        commentCount: post._count.comments,
+        reactions: undefined, // Remove raw reactions
+        _count: undefined     // Remove raw count
+      };
+    });
+
+    res.json(postsWithCounts);
+  } catch (error: any) {
+    res.status(400).json({ error: error.message });
+  }
 };
