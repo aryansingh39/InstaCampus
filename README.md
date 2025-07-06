@@ -1,7 +1,7 @@
 # 🎓 InstaCampus
 
 A modern full-stack campus social media platform for students and staff to connect, share news, and discuss everything campus-related.
-WhatsApp Image 2025-07-06 at 18.49.09.jpeg
+
 
 ---
 
@@ -20,6 +20,9 @@ WhatsApp Image 2025-07-06 at 18.49.09.jpeg
 <!-- Add actual image URLs or relative paths to your repo/images -->
 <p>
   <img src="WhatsApp Image 2025-07-06 at 18.49.09.jpeg" width="600" alt="Home Page Screenshot"/>
+</p>
+<p>
+  <img src="WhatsApp Image 2025-07-06 at 18.49.09 (1).jpeg" width="600" alt="Login Page Screenshot"/>
 </p>
 
 
