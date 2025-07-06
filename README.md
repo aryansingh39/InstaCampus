@@ -1,4 +1,4 @@
-# 🎓 InstaCampus
+<img width="1470" alt="Screenshot 2025-07-06 at 18 39 56" src="https://github.com/user-attachments/assets/c4611caa-27ab-4753-93ba-50da434e2143" /># 🎓 InstaCampus
 
 A modern full-stack campus social media platform for students and staff to connect, share news, and discuss everything campus-related.
 
@@ -18,14 +18,10 @@ A modern full-stack campus social media platform for students and staff to conne
 
 <!-- Add actual image URLs or relative paths to your repo/images -->
 <p>
-  <img src="YOUR_SCREENSHOT_URL_HERE" width="600" alt="Home Page Screenshot"/>
+  <img src="<img width="1470" alt="Screenshot 2025-07-06 at 18 39 56" src="https://github.com/user-attachments/assets/f92c147d-fa61-4612-b7d9-eb05386045ec" />
+" width="600" alt="Home Page Screenshot"/>
 </p>
-<p>
-  <img src="YOUR_SCREENSHOT_URL_HERE" width="600" alt="Feed and Sidebar Screenshot"/>
-</p>
-<p>
-  <img src="YOUR_SCREENSHOT_URL_HERE" width="600" alt="Comments Screenshot"/>
-</p>
+
 
 ---
 
