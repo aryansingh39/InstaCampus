@@ -7,16 +7,30 @@ export const createPost = async (req: Request, res: Response) => {
   if (!userId) return res.status(401).json({ error: 'Not authenticated' });
 
   const { content, tags = [] } = req.body;
-  const post = await prisma.post.create({
-    data: {
-      content,
-      tags,
-      authorId: userId
-    }
-  });
 
-  res.json(post);
+  if (!content || typeof content !== 'string') {
+    return res.status(400).json({ error: 'Content is required' });
+  }
+
+  if (!Array.isArray(tags)) {
+    return res.status(400).json({ error: 'Tags must be an array' });
+  }
+
+  try {
+    const post = await prisma.post.create({
+      data: {
+        content,
+        tags,
+        authorId: userId
+      }
+    });
+
+    res.json(post);
+  } catch (err: any) {
+    res.status(500).json({ error: err.message || 'Failed to create post' });
+  }
 };
+
 
 export const listPosts = async (_req: Request, res: Response) => {
   try {
