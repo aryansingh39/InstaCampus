@@ -44,11 +44,12 @@ export const login = async (req: Request, res: Response) => {
 };
 
 export const getCurrentUser = async (req: Request, res: Response) => {
-  const userInfo = req.user as { id: number }; // safer than @ts-ignore
-  if (!userInfo?.id) return res.status(401).json({ error: 'Not authenticated' });
+  if (!req.user?.id) {
+    return res.status(401).json({ error: 'Not authenticated' });
+  }
 
   const user = await prisma.user.findUnique({
-    where: { id: userInfo.id },
+    where: { id: req.user.id },
     select: {
       id: true,
       name: true,
@@ -60,6 +61,10 @@ export const getCurrentUser = async (req: Request, res: Response) => {
     }
   });
 
-  if (!user) return res.status(404).json({ error: 'User not found' });
+  if (!user) {
+    return res.status(404).json({ error: 'User not found' });
+  }
+
   res.json({ user });
 };
+
