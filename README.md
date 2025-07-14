@@ -25,10 +25,10 @@ Built with modern web technologies including React, Express, TypeScript, and Pos
 
 ## 🖼️ Screenshots
 <p>
-  <img src="FeedPageimg.jpeg" width="400" alt="Home Page Screenshot"/>
+  <img src="./FeedPageimg.jpeg" width="400" alt="Home Page Screenshot"/>
 </p>
 <p>
-  <img src="LoginPage.jpeg" width="400" alt="Login Page Screenshot"/>
+  <img src="./LoginPage.jpeg" width="400" alt="Login Page Screenshot"/>
 </p>
 
 
@@ -106,7 +106,7 @@ Go to [http://localhost:3000](http://localhost:3000) — or replace 3000 with yo
 Here’s the Entity-Relationship (ER) model used in Instacampus:
 
 <p align="center">
-  <img src="er_diagram_travellaDB.png" alt="Instacampus ER Diagram" width="600"/>
+  <img src="insta-campus erd.png" alt="Instacampus ER Diagram" width="800"/>
 </p>
 
 ---
