@@ -1,4 +1,4 @@
-# 🎓 Instacampus
+# Instacampus
 
 Instacampus is a full-stack web application designed to connect students on campus. It allows users to post updates, comment, react, track trends — all in one place.
 
@@ -6,7 +6,7 @@ Built with modern web technologies including React, Express, TypeScript, and Pos
 
 ---
  **Live Site**: [https://insta-campus.vercel.app](https://insta-campus.vercel.app)
-## 🛠️ Tech Stack
+## Tech Stack
 
 **React**, **TypeScript**, **Node.js**, **Express.js**, **PostgreSQL**
 
@@ -23,18 +23,16 @@ Built with modern web technologies including React, Express, TypeScript, and Pos
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 <p>
-  <img src="./FeedPageimg.jpeg" width="400" alt="Home Page Screenshot"/>
+  <img src="FeedPageimg.jpeg" width="400" alt="Home Page Screenshot"/>
 </p>
 <p>
-  <img src="./LoginPage.jpeg" width="400" alt="Login Page Screenshot"/>
+  <img src="LoginPage.jpeg" width="400" alt="Login Page Screenshot"/>
 </p>
-
-
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 Instacampus/
 ├── packages/
@@ -44,7 +42,7 @@ Instacampus/
 
 ---
 
-## 🧑‍💻 Local Setup — Step by Step
+## Local Setup — Step by Step
 
 > Works on **Windows, Mac, or Linux**
 
@@ -86,7 +84,7 @@ Go to [http://localhost:3000](http://localhost:3000) — or replace 3000 with yo
 
 ---
 
-## 📝 Notes
+## Notes
 
 - Register or login to use.
 - You can post, comment, and upvote/downvote right away!
@@ -101,7 +99,7 @@ Go to [http://localhost:3000](http://localhost:3000) — or replace 3000 with yo
 - **Database** – Neon PostgreSQL
 ---
 
-## 🗃️ Database Design
+## Database Design
 
 Here’s the Entity-Relationship (ER) model used in Instacampus:
 
