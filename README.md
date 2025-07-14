@@ -1,42 +1,38 @@
-# 🎓 InstaCampus
+# Instacampus
 
-A modern full-stack campus social media platform for students and staff to connect, share news, and discuss everything campus-related.
+Instacampus is a full-stack web application designed to connect students on campus. It allows users to post updates, comment, react, track trends — all in one place.
 
+Built with modern web technologies including React, Express, TypeScript, and PostgreSQL.
+
+---
+ **Live Site**: [https://insta-campus.vercel.app](https://insta-campus.vercel.app)
+## Tech Stack
+
+**React**, **TypeScript**, **Node.js**, **Express.js**, **PostgreSQL**
 
 ---
 
-## 🚀 Features
+## Features
 
 - User authentication (JWT)
-- Posting with tags and images
-- Comments and threaded discussions
+- Create, read, comment on posts
 - Upvotes/downvotes on posts
-- Responsive UI with trending tags and campus links
+- Comments and threaded discussions
+- Trending tags and campus-specific links
+- Fully responsive UI
 
 ---
 
-## 🖼️ Screenshots
-
-<!-- Add actual image URLs or relative paths to your repo/images -->
+## Screenshots
 <p>
-  <img src="WhatsApp Image 2025-07-06 at 18.49.09.jpeg" width="600" alt="Home Page Screenshot"/>
+  <img src="FeedPageimg.jpeg" width="400" alt="Home Page Screenshot"/>
 </p>
 <p>
-  <img src="WhatsApp Image 2025-07-06 at 18.49.09 (1).jpeg" width="600" alt="Login Page Screenshot"/>
+  <img src="LoginPage.jpeg" width="400" alt="Login Page Screenshot"/>
 </p>
-
-
 ---
 
-## 🛠️ Tech Stack
-
-- **Frontend:** React 18, TypeScript, Tailwind CSS, Vite
-- **Backend:** Node.js, Express.js, Prisma ORM, TypeScript
-- **Database:** PostgreSQL
-
----
-
-## 🏗️ Project Structure
+## Project Structure
 
 Instacampus/
 ├── packages/
@@ -46,7 +42,7 @@ Instacampus/
 
 ---
 
-## 🧑‍💻 Local Setup — Step by Step
+## Local Setup — Step by Step
 
 > Works on **Windows, Mac, or Linux**
 
@@ -63,11 +59,9 @@ Instacampus/
 
 ### 4. **Configure Environment Variables (Backend)**
 
-- In `packages/server`, copy `.env.example` to `.env`:
-- Edit `.env`:
+- In packages/server/, create a `.env` file and add:
 DATABASE_URL="postgresql://postgres:YOUR_PASSWORD@localhost:5432/instacampus"
-JWT_SECRET="choose_any_long_random_string"
-
+JWT_SECRET="your_random_secret"
 
 ### 5. **Run Prisma Migrations**
 
@@ -86,11 +80,11 @@ cd packages/web
 npm run dev
 ### 8. **Open in Your Browser**
 
-Go to [http://localhost:3000](http://localhost:3000)
+Go to [http://localhost:3000](http://localhost:3000) — or replace 3000 with your specified frontend port if different
 
 ---
 
-## 📝 Notes
+## Notes
 
 - Register or login to use.
 - You can post, comment, and upvote/downvote right away!
@@ -98,17 +92,19 @@ Go to [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🌏 Deployment (for Later)
+## Deployment
 
-- Deploy backend & DB (Railway/Render/other)
-- Deploy frontend (Netlify/Vercel)
-- Set environment variables in each platform as shown above
-
+- **Frontend** – Vercel
+- **Backend** – Render
+- **Database** – Neon PostgreSQL
 ---
 
-## 📜 License
+## Database Design
 
-MIT
+Here’s the Entity-Relationship (ER) model used in Instacampus:
 
-**Built with ❤️ by Aryan Singh and contributors**
+<p align="center">
+  <img src="insta-campus erd.png" alt="Instacampus ER Diagram" width="800"/>
+</p>
 
+---
