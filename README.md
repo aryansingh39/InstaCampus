@@ -25,10 +25,10 @@ Built with modern web technologies including React, Express, TypeScript, and Pos
 
 ## Screenshots
 <p>
-  <img src="FeedPageimg.jpeg" width="400" alt="Home Page Screenshot"/>
+  <img src="Instacampus:home.jpeg" width="400" alt="Home Page Screenshot"/>
 </p>
 <p>
-  <img src="LoginPage.jpeg" width="400" alt="Login Page Screenshot"/>
+  <img src="login.jpeg" width="400" alt="Login Page Screenshot"/>
 </p>
 ---
 
