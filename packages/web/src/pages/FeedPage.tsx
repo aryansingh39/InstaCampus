@@ -78,8 +78,7 @@ export default function FeedPage() {
       <header className="bg-white shadow sticky top-0 z-20">
         <div className="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <div className="text-2xl text-indigo-600 font-bold">🎓 InstaCampus</div>
-            <span className="text-sm text-indigo-400 font-semibold px-2 py-0.5 rounded bg-indigo-50">Beta</span>
+            <div className="text-2xl text-indigo-600 font-bold"> InstaCampus</div>
           </div>
           <div className="flex items-center space-x-3">
             <span className="text-sm text-gray-700">Hello, {user?.name}!</span>
